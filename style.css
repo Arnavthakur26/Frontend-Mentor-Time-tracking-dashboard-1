@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Rubik:wght@300;400;500&display=swap");
+:root {
+  --Blue: hsl(246, 80%, 60%);
+  --Light-red-work: hsl(15, 100%, 70%);
+  --Soft-blue-play: hsl(195, 74%, 62%);
+  --Light-red-study: hsl(348, 100%, 68%);
+  --Lime-green-exercise: hsl(145, 58%, 55%);
+  --Soft-orange-self-care: hsl(43, 84%, 65%);
+  --Violet-social: hsl(264, 64%, 52%);
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Pale-Blue: hsl(236, 100%, 87%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  background-color: var(--Very-dark-blue);
+  height: 100%;
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  display: flex;
+}
+.main-profile-container {
+  width: 17vw;
+  height: 34vw;
+  position: relative;
+  background-color: var(--Dark-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+.main-top {
+  z-index: 100;
+}
+.main-top > img {
+  height: 6vw;
+  width: 6vw;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin: 2vw;
+  margin-top: 1.5vw;
+}
+.main-top > h5 {
+  margin: 1vw auto 0.6vw 2vw;
+  color: var(--Pale-Blue);
+  font-size: 0.8vw;
+  font-weight: 400;
+}
+.main-top > .name {
+  font-size: 2.5vw;
+  margin: 0 2vw 1vw 2vw;
+  font-weight: 300;
+  color: white;
+}
+.main-bottom > .time-frame {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2vw 1vw 2vw;
+  line-height: 2.5;
+  font-weight: 400;
+  color: var(--Desaturated-blue);
+}
+.main-bottom > .time-frame > span {
+  cursor: pointer;
+  transition: color 0.3s;
+  font-size: 1.1vw;
+}
+.main-bottom > .time-frame > span:hover {
+  color: white;
+}
+.main-top > .main-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 23vw;
+  border-radius: 10px;
+  background-color: var(--Blue);
+  z-index: -1;
+}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-left: 2vw;
+  gap: 2vw;
+}
+.cards > .card {
+  width: 17vw;
+  height: 16.5vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.card-top {
+  width: 100%;
+  height: 50%;
+  border-radius: 10px;
+  z-index: 1;
+}
+.card-bottom {
+  width: 100%;
+  height: 16vw;
+  position: relative;
+  top: -15px;
+  border-radius: 10px;
+  background-image: url("./icon-ellipsis.svg");
+  background-repeat: no-repeat;
+  background-position: 210px 30px;
+  background-color: var(--Dark-blue);
+  z-index: 10;
+}
+.work > .card-top {
+  background-color: var(--Light-red-work);
+  background-image: url("./icon-work.svg");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+.play > .card-top {
+  background-color: var(--Soft-blue-play);
+  background-image: url("./icon-play.svg");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+.study > .card-top {
+  background-color: var(--Light-red-study);
+  background-image: url("./icon-study.svg");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+.exercise > .card-top {
+  background-color: var(--Lime-green-exercise);
+  background-image: url("./icon-exercise.svg");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+.social > .card-top {
+  background-color: var(--Violet-social);
+  background-image: url("./icon-social.svg");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+.self-care > .card-top {
+  background-color: var(--Soft-orange-self-care);
+  background-image: url("./icon-self-care.svg");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+.card-bottom > h3 {
+  margin: 1.5vw;
+  font-size: 1.4vw;
+  font-weight: 400;
+  color: white;
+}
+.card-bottom > .time {
+  margin: 1.5vw;
+  margin-bottom: 0.5vw;
+  font-size: 4vw;
+  color: white;
+  font-weight: 300;
+}
+.card-bottom > h5 {
+  margin: 1.5vw;
+  margin-top: 0;
+  font-size: 1vw;
+  font-weight: 400;
+  color: var(--Desaturated-blue);
+}
+.attribution {
+  position: relative;
+  top: 80px;
+  font-size: 11px;
+  text-align: center;
+  color: hsl(228, 45%, 44%);
+}
+.attribution a {
+  color: white;
+}
